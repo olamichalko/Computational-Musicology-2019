@@ -36,7 +36,7 @@ t.test(ada$danceability,tita$danceability)
 t.test(ada$speechiness,tita$speechiness)
 
 
-#For both artists the standard deviation of tempo is large: Ada sd=25.62 and Tita sd= 22.54. It may be due to the significant variability of tempi across the songs, for instance, the min and max tempo of Ada Falcon's songs is 55.10 and 149.30 respectively. For Tita is min tempo 82.69 and max tempo 179.60. Until, now no outliers have been spotted that should be excluded in the further analysis. Also, in the further analysis I will include all audio tracks of Ada Falcon (444) and Tita Merello (379) listed on Spotify.   
+#For both artists the standard deviation of tempo is large: Ada sd=25.62 and Tita sd= 22.54. It may be due to the significant variability of tempi across the songs, for instance, the min and max tempo of Ada Falcon's songs is 55.10 and 149.30 respectively. For Tita is min tempo 82.69 and max tempo 179.60. Until, now no outliers have been spotted that should be excluded in the further analysis. Also, in the further analysis I will include all audio tracks of Ada Falcon (444) and Tita Merello (379) which are listed on Spotify.   
 
  
 
