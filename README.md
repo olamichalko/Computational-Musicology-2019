@@ -17,12 +17,12 @@ adaytita <-rbind("ada","tita")
 ggplot(adaytita, aes(x=mode, fill=artist_name))+
 +     geom_bar(position="dodge")
 ![modetitayada](modetitayada.png)
-![modetitayada](relative/path/to/img.jpg?raw=true "modetitayada")
+
 #Furthermore, I looked at the keys used by both ladies and it results that Tita Merello sings predominantly in A#, B and G, whereas Ada Falcon in A, A# and C. Interisting is a fact that Tita Morello did not sing even one song in key C (on basis of this sample). 
 
 ggplot(adaytita, aes(x=key, fill=artist_name))+
 +     geom_bar(position="dodge")
-
+![keytitayada](keytitayada.png)
 
 #By comparing means of danceability, speechiness, tempo, valence and energy we can conclude that the significant differences between those two singers appear on the features such as valence(Ada M= 0.55104, sd=0.1582976; Tita M = 0.69766, sd= 0.1178672) , tempo (Ada M= 100.2069,sd=25.62549; Tita M = 123.2873, sd= 22.53996) , energy (Ada M= 0.235204, sd=0.09306531; Tita M= 0.350420, sd = 0.08532246), speechiness ( Ada M= 0.242930,sd=0.1529035; Tita M= 0.141002, sd= 0.08235345) but not on danceability(Ada M= 0.63476,sd=0.07626687; Tita M =0.64416, sd=0.09897276): 
 
