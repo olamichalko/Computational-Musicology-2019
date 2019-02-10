@@ -16,7 +16,8 @@ adaytita <-rbind("ada","tita")
 
 ggplot(adaytita, aes(x=mode, fill=artist_name))+
 +     geom_bar(position="dodge")
-
+![modetitayada](modetitayada.png)
+![modetitayada](relative/path/to/img.jpg?raw=true "modetitayada")
 #Furthermore, I looked at the keys used by both ladies and it results that Tita Merello sings predominantly in A#, B and G, whereas Ada Falcon in A, A# and C. Interisting is a fact that Tita Morello did not sing even one song in key C (on basis of this sample). 
 
 ggplot(adaytita, aes(x=key, fill=artist_name))+
