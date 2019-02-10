@@ -1,10 +1,13 @@
 # Computational-Musicology-2019
 # The Corpus I have made consists of tango songs performed by two famous tangueras Ada Falcon and Tita Merello. On basis of their dyscographies and recordings, I would like to compare and analyze their styles and ways of singing. I will search for similarities and differences between those two singers. My corpus consists of 100 tracks (50 sung by Ada Falcon and 50 by Tita Merello), which I have chosen randomly from 444 audio tracks of Falcon and 379 audio tracks of Merello. 
+
 falcon <- get_artist_audio_features('ada falcon')
 merello <- get_artist_audio_features('tita merello')
 ada <- sample_n(falcon,50)
 tita <- sample_n(merello,50)
-#in order to combain those two samples I had to create a new variable artist_name and combaine those two data.frames 
+
+#In order to combaine the two samples I had to create a new variable artist_name 
+
 artist_name <-c("AdaFalcon")
 ada <- data.frame(artist_name, ada)
 artist_name<- c("Tita Merello")
