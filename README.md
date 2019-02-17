@@ -27,8 +27,8 @@ The comparison of key modes shows that Merello sings predominantly in G major,A 
 
 In general, the data of audio features of tango songs does not have a normal distribution. Therefore, in order to compare means of various audio features I applied the unpaired two-samples Wilcoxon test. 
 
-![histogram_tempo] (histogramtempo.png)
-![histogram_danceability] (histogramdanceability.png)
+![histogramtempo](histogramtempo.png)
+![histogramdanceability](histogramdanceability.png)
 
 
 By comparing means of danceability, speechiness, tempo, valence and energy we can conclude that there exist significant differences between Falcon and Merello on features such as valence ( p-value of a wilcoxon test = 2.2e-16 ), tempo (p-value of a wilcoxon test = 2.2e-16 ) , energy (p-value of a wilcoxon test = 2.2e-16), speechiness (p-value of a wilcoxon test = 2.832e-06), danceability(p-value of a wilcoxon test = 8.247e-06) and acousticness (p-value of a wilcoxon test = 2.2e-16). In general, except the speechiness and acousticness, all features of Tita Morello give higher values than the ones of Ada Falcon. 
