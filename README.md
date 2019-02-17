@@ -1,5 +1,7 @@
 ## Computational-Musicology-2019
 
+### Introduction
+
 >Tango can be discussed, and we discuss it, but it encloses, as everything that is true, a secret…a French or Spanish composer who threads a tango, discovers, not without surprise, he has threaded something that our ears do not recognize, that our memory does not host, and that our body rejects it could be said that without the sunsets and evenings of Buenos Aires no tango can be made…and that this adventurous species has, however humble, its place on the universe” (Borges in Gomez, 2007/trans. A. Michalko).
 
 Since the 1930s, musicologists and dance specialists have tried to reconstruct and ‘put some systematic order’ into tango origins (Savigliano, 1995). The search for Argentinean tango’s beginnings and authenticity raised many discussions as some historians attribute it to African population connecting it to their rituals and music traditions; others seek its origins in the art of payadores (singers and guitar players from the inside of the country); and some in the arrival of European immigrants at the end of 19th century. The matter of which one of these groups is more entitled to tango will not be discussed here. Instead, I would like to explore and compare the style of two iconic tangueras from 1930s: Ada Falcon and Tita Merello.
@@ -7,23 +9,10 @@ Since the 1930s, musicologists and dance specialists have tried to reconstruct a
 ### Corpus 
 The Corpus consists of tango songs performed by Ada Falcon and Tita Merello. On basis of their dyscographies and recordings, I will search for similarities and differences between those two tangueras. The corpus consists of 600 tracks (300 sung by Ada Falcon and 300 by Tita Merello), which I have chosen randomly from 444 audio tracks of Falcon and 379 audio tracks of Merello. 
 
-falcon <- get_artist_audio_features('ada falcon')
-merello <- get_artist_audio_features('tita merello')
-ada <- sample_n(falcon,300)
-tita <- sample_n(merello,300)
-
-In order to combaine the two samples I had to create a new variable artist_name 
-
-artist_name <-c("AdaFalcon")
-ada <- data.frame(artist_name, ada)
-artist_name<- c("Tita Merello")
-tita <- data.frame(artist_name, tita)
-
-adaytita <-rbind("ada","tita")
-
 ### Preliminary analysis 
 
-#The comparison of modes shows that Tita Merello sings predominantly in the Major mode (37 out of 50 songs), whereas Ada Falcon is more equilibrated.
+
+The comparison of modes shows that Tita Merello sings predominantly in the Major mode (37 out of 50 songs), whereas Ada Falcon is more equilibrated.
 
 
 ![modetitayada](modetitayada.png)
