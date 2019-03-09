@@ -15,8 +15,8 @@ library(tidyverse)
 library(spotifyr)
 library(plotly)
 library(ggplot2)
+library(compmus)
 source("spotify.R")
-
 ```
 
 ```{r load cantro, include=FALSE}
@@ -115,7 +115,7 @@ In the further analysis I would like to combine various variables and examine th
 Milonga {data-navmenu="First Steps"}
 ======================================================================================================
 
-Milonga {data-width=200, data-height=200 .storyboard}
+Milonga {data-width=300, data-height=300 .storyboard}
 -------------------------------------------------------------------------------------------
 ###**Milonga**
 
@@ -186,13 +186,15 @@ The comparison of interdependencies among various audio features did not demonst
 Chromagrams {data-navmenu="Silbando" data-orientation=columns}
 ==============================================================================================
 
-Troilo{data-width=300, data-height=300}
+together{data-width=600, data-height=600 .tabset}
 ---------------------------------------------------------------------------------
+
+###Orquesta de Troilo
+
 ![Orquesta de Troilo](C:/Users/pc/Desktop/Computational-Musicology-2019/silbandotro.png)
 
+###Orquesta de Canaro 
 
-Canaro{data-width=300, data-height=300}
-------------------------------------------------------------------------------------
 ![Orquesta de Canaro](C:/Users/pc/Desktop/Computational-Musicology-2019/silbandocan.png)
 
 
@@ -204,13 +206,16 @@ Both chromagrams illustrate tango song *Silbando*. The first is a version of Tro
 Similarity matrices {data-navmenu="Silbando" data-orientation=columns}
 ==================================================================================================
 
-troilo{data-width=300, data-height=300}
+both{data-width=600, data-height=600 .tabset}
 ----------------------------------------------------------------------------------
+
+###Orquesta de Troilo
+
 ![Orquesta de Troilo](C:/Users/pc/Desktop/Computational-Musicology-2019/matrsiltrobarseucl.png)
 
 
-canaro{data-width=300, data-height=300}
--------------------------------------------------------------------------------------------
+###Orquesta de Canaro 
+
 ![Orquesta de Canaro](C:/Users/pc/Desktop/Computational-Musicology-2019/matrsilcanbarseucl.png)
 
 
@@ -219,9 +224,73 @@ text{data-width=400, data-height=400}
 --------------------------------------------------------------------------------------
 The original structure of the tango song *Silbando* is: Intro A A’ B B’ B’(whistling) A A’ B B’ B’(whistling).
 The versions of Troilo and Canaro vary substantially in structure, but also in the songs’ instrumentations. 
-*Silbando* of Troilo has a structure of B B’ A A’ B’’ B’’’ A’’ A’’’ B’’’’ and has lots of timbre changes. Although, the piece was originally written for a singer and piano/orchestra, this version is instrumental. It starts with soft whistling accompanied by a guitar. In the next section clearly visible on the similarity matrix appears another section A’, which is played on accordion and guitar. 
-Interestingly enough, Troilo does not introduce a new instrument in each new section. Instead, he makes new combinations of the same instruments (for instance, accordion + guitar, guitar + double bass, accordion + double bass); manipulates acoustic balance between them (for instance, in B and B’’ we have the same combination of instruments, however in B the accordion is much more salient than a guitar whereas in B’’ they are even); and changes timbre through the usage of various articulations (for, instance pizzicato and bowing on strings) and dynamics. For these reasons, the similarity matrix shows so many timbre novelties (substantial amount of grey/yellow lines throughout the duration of all the piece). 
-Also, the similarity matrix suggests that the very beginning (0-25s) of Troilo’s version has two separate segments, although, it should be treated as one (A). It could be due to the fact that at first we hear only whistling, even though, the guitar comes in before the end of the first “whistling phrase”. We could interpret it as either a Type I Error, or the indication of more detailed structure.          
- 
-The version of Canaro has a structure: A A’ B B’ A’’ A’’’ B’’ B’’’ B’’’’ A’’’’ A’’’’’. It is more difficult to see this structure on the similarity matrix as it does not have so many remarkable timbre changes as a version of Troilo. In fact, the entrance of the singer in 1:03 is almost not marked/visible on the similarity matrix. The big grey/yellow line around 2:10 signalizes a timbre novelty, which in this case is whistling.   
+*Silbando* of Troilo has a structure of B B’ A A’ B’’ B’’’ A’’ A’’’ B’’’’ and has lots of timbre changes. Although, the piece was originally written for a singer and piano/orchestra, this version is instrumental. It starts with soft whistling accompanied by a guitar. In the next section clearly visible on the similarity matrix (around 25s) appears section B’, which is played on accordion and guitar. 
+Interestingly enough, Troilo does not introduce a new instrument in each new section. Instead, he makes new combinations of the same instruments (for instance, accordion + guitar, guitar + double bass, accordion + double bass); manipulates acoustic balance between them (for instance, in B and B’’ we have the same combination of instruments, however, in B the accordion is much more salient than a guitar whereas in B’’ they are even); and changes timbre through the usage of various articulations (for, instance pizzicato and bowing on strings) and dynamics. For these reasons, the similarity matrix shows many timbre novelties (substantial amount of grey/yellow lines throughout the duration of all the piece), which in its turn indicate clearly the beginning of each section. 
 
+Nevertheless, the section division marked by the timbre novelties does not necessarily coincide with the  general division  of similarity matrix: , for instance the  timbre novelty pattern suggests that the very beginning (0-25s) of Troilo’s version has two separate segments, although, it should be treated as one (A). On the other hand, the similarity matrix interprets the middle of the piece as a single section (from 60-120s), even though, it has many more sections within it (as indicated by the timbre novelty lines). We could interpret it as a Type I Error, even though, at this moment we are able to see the structure of the piece ( as we combine information from similarity matrix general segmentation and the timbre novelty lines). However, as the consequences of this error, the further analysis might yield incorrect results, for instance, of the key chord recognition.
+ 
+The version of Canaro has a structure: A A’ B B’ A’’ A’’’ B’’ B’’’ B’’’’ A’’’’ A’’’’’. It is more difficult to see this structure on the similarity matrix as it does not have so many remarkable timbre changes as a version of Troilo. In fact, the entrance of the singer in 1:03 is almost not marked/visible on the similarity matrix. The big grey/yellow line around 2:10 signalizes a timbre novelty, which in this case is whistling.
+
+Chord Recognition {data-navmenu="Silbando" data-orientation=columns}
+====================================================================================================
+
+Cantro{data-width=600, data-height=600 .tabset}
+------------------------------------------------------------------------------------------------------
+
+###Orquesta de Troilo
+
+![Orquesta de Troilo](C:/Users/pc/Desktop/Computational-Musicology-2019/chordssilbandotro.png)
+
+###Orquesta de Canaro
+
+![orquesta de Cantro](C:/Users/pc/Desktop/Computational-Musicology-2019/chordssilbandocantro.png)
+
+Text{data-width=300, data-height=400}
+-----------------------------------------------------------------------------------------------------------
+In the majority of tango songs, the Spotify features failed to assign a correct key to the song. It may be due to the fact that a new section of tango song is usually played in another key mode, for instance, the A part of *Silbando* is in d minor and the B part in D major.
+The chord recognition does not work very well either.
+The key mode of both performances of *Silbando* given by Spotify API features is D Major. Nevertheless, in case of orquesta de Canaro indicates in the first section a predominance of f# minor and c# minor. Around 80s a d minor comes into play, however, from 100s the f# minor and c# minor are again predominant. Two vertical yellow lines indicate transitions between sections A and B, which as mentioned before are in different modes (A in minor key and B in major key). Interestingly enough, these are not the only places where the transition between the modes takes place. It is rather clear that chord recognition failed to indicate major modes and in case of ambiguity ca 100s "privileges" minor modes.
+
+In case of Troilo's version the key chord recognition is also unprecise and ambiguous. Although, from 60s till 120s the algorithm distinguishes d minor, D Major, a minor and A Major, it is unable to point out the exact changes and transitions of the chords.  It might be due to the incorrect section division (see similarity matrices) but the chord recognition made per bars yields similar results. It shows the simultaneous occurrence of A major and a minor, even though, the listeners are able to distinguish clearly a chord mode of each section and bar while listening to the piece.   
+
+
+These examples suggest that Spotify's tools for harmony recognition are insufficient and unable to analyze/show a complexity and richness of tango harmony. In these cases, the difficulties and ambiguities in chord recognition stem from the tuning issues, segmentation ambiguities and confusion of partials.
+
+
+
+
+
+Cepstrograms and Timbre Coefficients comparison {data-navmenu="Silbando" data-orientation=columns}
+==========================================================================================================
+
+cepstrograms {data-width=800, data-height=800 .tabset}
+------------------------------------------------------------------------------------------------------------
+
+###Timbre Coefficients
+
+![timbre coefficients Silbando](C:/Users/pc/Desktop/Computational-Musicology-2019/timbrecoefsilbando.png)
+
+
+###Cepstrograms
+
+![cepstrogram silbando Canaro](C:/Users/pc/Desktop/Computational-Musicology-2019/cepstrobarsilcan.png)
+![Cepstrogram Silbando Troilo](C:/Users/pc/Desktop/Computational-Musicology-2019/cepstrosiltro.png)
+
+
+
+text {data-width=300, data-height=300}
+-------------------------------------------------------------------------------------------------------------
+The comparison and analysis of timbre coefficents shows substantial differances between those two versions. The third component, which according to Spotify API correlates with spectral flatness has a very low values in Troilo's version (from 5 till -120) and relatively high ones in Canaro's version of this piece (from 40 till 80). It suggests that the spectral power, in case of Troilo's performance, is concentrated in a relatively small number of bands whereas Cantro's version has similar amount of power in all spectral bands. 
+Furthermore, the differance in components 5, 6 and 7 is observed. Although, Spotify API does not specify with which acoustic features those components correlate, a possible candidates are: Log Spectral Spread and Roll- off, Spectral Irregularity or Spectral Entropy. However, which ones precisely still needs to be determined.   
+
+The individual cepstrograms of these two versions confirm the previous comparison. 
+
+La ultima curva
+=========================================================================================================
+
+2019. Project made by Aleksandra Michalko as a part of the course Computational Musicology at the University of Amsterdam given by/lectured by Dr John Ashley Burgoyne.
+
+References: 
+Gobello, J. (1980). *Crónica general del tango* (No. 78 (091)). Fraterna.
+Gomez, A. (2009). *Ultimo patio*. Turmalina.
+Savigliano, M. (1995). *Tango and the political economy of passion.* Westview Press.
