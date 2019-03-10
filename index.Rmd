@@ -243,7 +243,7 @@ Cantro{data-width=600, data-height=600 .tabset}
 
 ###Orquesta de Canaro
 
-![orquesta de Cantro](C:/Users/pc/Desktop/Computational-Musicology-2019/chordssilbandocantro.png)
+![Orquesta de Canaro](C:/Users/pc/Desktop/Computational-Musicology-2019/chordssilbandocantro.png)
 
 Text{data-width=300, data-height=400}
 -----------------------------------------------------------------------------------------------------------
