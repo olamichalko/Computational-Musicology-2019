@@ -25,10 +25,10 @@ load("C:/Users/pc/Desktop/Computational-Musicology-2019/cantro.RData")
 ```
 
 
-Gotán
+GotÃ¡n
 ===============================================================================================================
 
-###**Gotán** 
+###**GotÃ¡n** 
 
 "Tango can be discussed, and we discuss it, but it encloses, as everything that is true, a secret...a French or Spanish composer who threads a tango, discovers, not without surprise, he has threaded something that our ears do not recognize, that our memory does not host, and that our body rejects it could be said that without the sunsets and evenings of Buenos Aires no tango can be made...and that this adventurous species has, however humble, its place on the universe" (Borges in Gomez, 2007/trans. A. Michalko).
 
@@ -220,14 +220,14 @@ both{data-width=500, data-height=500 .tabset}
 
 text{data-width=500, data-height=500}
 --------------------------------------------------------------------------------------
-The original structure of the tango song *Silbando* is: Intro A A’ B B’ B’(whistling) A A’ B B’ B’(whistling).
+The original structure of the tango song *Silbando* is: Intro A Aâ€™ B Bâ€™ Bâ€™(whistling) A Aâ€™ B Bâ€™ Bâ€™(whistling).
 The versions of Troilo and Canaro vary substantially in structure, but also in the songs' instrumentations. 
-*Silbando* of Troilo has a structure of B B’ A A’ B’’ B’’’ A’’ A’’’ B’’’’ and has lots of timbre changes. Although, the piece was originally written for a singer and piano/orchestra, this version is instrumental. It starts with soft whistling accompanied by a guitar. In the next section clearly visible on the similarity matrix (around 25s) appears section B', which is played on accordion and guitar. 
+*Silbando* of Troilo has a structure of B Bâ€™ A Aâ€™ Bâ€™â€™ Bâ€™â€™â€™ Aâ€™â€™ Aâ€™â€™â€™ Bâ€™â€™â€™â€™ and has lots of timbre changes. Although, the piece was originally written for a singer and piano/orchestra, this version is instrumental. It starts with soft whistling accompanied by a guitar. In the next section clearly visible on the similarity matrix (around 25s) appears section B', which is played on accordion and guitar. 
 Interestingly enough, Troilo does not introduce a new instrument in each new section. Instead, he makes new combinations of the same instruments (for instance, accordion + guitar, guitar + double bass, accordion + double bass); manipulates acoustic balance between them (for instance, in B and B'' we have the same combination of instruments, however, in B the accordion is much more salient than a guitar whereas in B'' they are even); and changes timbre through the usage of various articulations (for, instance pizzicato and bowing on strings) and dynamics. For these reasons, the similarity matrix shows many timbre novelties (substantial amount of grey/yellow lines throughout the duration of all the piece), which in its turn indicate clearly the beginning of each section. 
 
 Nevertheless, the section division marked by the timbre novelties does not necessarily coincide with the  general division  of similarity matrix: , for instance the  timbre novelty pattern suggests that the very beginning (0-25s) of Troilo's version has two separate segments, although, it should be treated as one (A). On the other hand, the similarity matrix interprets the middle of the piece as a single section (from 60-120s), even though, it has many more sections within it (as indicated by the timbre novelty lines). We could interpret it as a Type I Error, even though, at this moment we are able to see the structure of the piece ( as we combine information from similarity matrix general segmentation and the timbre novelty lines). However, as the consequences of this error, the further analysis might yield incorrect results, for instance, of the key chord recognition.
  
-The version of Canaro has a structure: A A’ B B’ A’’ A’’’ B’’ B’’’ B’’’’ A’’’’ A’’’’’. It is more difficult to see this structure on the similarity matrix as it does not have so many remarkable timbre changes as a version of Troilo. In fact, the entrance of the singer in 1:03 is almost not marked/visible on the similarity matrix. The big grey/yellow line around 2:10 signalizes a timbre novelty, which in this case is whistling.
+The version of Canaro has a structure: A Aâ€™ B Bâ€™ Aâ€™â€™ Aâ€™â€™â€™ Bâ€™â€™ Bâ€™â€™â€™ Bâ€™â€™â€™â€™ Aâ€™â€™â€™â€™ Aâ€™â€™â€™â€™â€™. It is more difficult to see this structure on the similarity matrix as it does not have so many remarkable timbre changes as a version of Troilo. In fact, the entrance of the singer in 1:03 is almost not marked/visible on the similarity matrix. The big grey/yellow line around 2:10 signalizes a timbre novelty, which in this case is whistling.
 
 Chord Recognition {data-navmenu="Silbando" data-orientation=columns}
 ====================================================================================================
@@ -317,12 +317,12 @@ The results of Random Forest suggest three audio features that are the most help
 In the reduced version of knn only top three features were used: Timbre Component 06, Danceability and Timbre Component 11. Surprisingly enough, it has lower accuracy than the previous model:  0.690, kap 0.381 and j_ind 0.381. As a consequence it classified 95 songs of Canaro as of Troiolo's and 93 songs of Troilo as of Canaro's.
 
 
-La última curva
+La Ãºltima curva
 =========================================================================================================
 
 2019. Project made by Aleksandra Michalko as a part of the course Computational Musicology at the University of Amsterdam given by/lectured by Dr John Ashley Burgoyne.
 
 References: 
-Gobello, J. (1980). *Crónica general del tango* (No. 78 (091)). Fraterna.
+Gobello, J. (1980). *CrÃ³nica general del tango* (No. 78 (091)). Fraterna.
 Gomez, A. (2009). *Ultimo patio*. Turmalina.
 Savigliano, M. (1995). *Tango and the political economy of passion.* Westview Press.
