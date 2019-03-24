@@ -15,6 +15,9 @@ library(tidyverse)
 library(spotifyr)
 library(plotly)
 library(ggplot2)
+library(ggdendro)
+library(protoclust)
+library(heatmaply)
 library(compmus)
 library(tidymodels)
 source("spotify.R")
@@ -41,7 +44,7 @@ Since the 1930s, musicologists and dance specialists have tried to reconstruct a
 
 **Corpus**
 
-The Corpus consists of tango songs performed by Ada Falcon and Tita Merello. On basis of their dyscographies and recordings, I will search for similarities and differences between those two tango orchestras. The corpus consists of 608 tracks (304 performed by Orquesta de Canaro and 304 by de Orquesta de Troilo). 
+The Corpus consists of tango songs performed by orquesta de Canaroand Orquesta de Troilo. On basis of their dyscographies and recordings, I will search for similarities and differences between those two tango orchestras. The corpus consists of 608 tracks (304 performed by Orquesta de Canaro and 304 by de Orquesta de Troilo). 
 
 
 
@@ -317,8 +320,43 @@ The results of Random Forest suggest three audio features that are the most help
 In the reduced version of knn only top three features were used: Timbre Component 06, Danceability and Timbre Component 11. Surprisingly enough, it has lower accuracy than the previous model:  0.690, kap 0.381 and j_ind 0.381. As a consequence it classified 95 songs of Canaro as of Troiolo's and 93 songs of Troilo as of Canaro's.
 
 
-La última curva
+Clustering {data-orientation=columns}
 =========================================================================================================
+
+both{data-width=800, data-height=800 .tabset}
+-------------------------------------------------------------------------------------------
+
+###Hierarchical clustering
+
+![Hierarchical clustering random sample](C:/Users/pc/Desktop/Computational-Musicology-2019/protoclastmanhattan.png)
+
+###Heatmap
+
+```{r}
+
+grDevices::dev.size("px")
+heatmaply(
+    ct50r_juice,
+    # hclustfun = hclust,
+    hclustfun = protoclust,
+    # Comment out the hclust_method line when using protoclust.
+    # hclust_method = 'average',
+    dist_method = 'manhattan')
+```
+
+both{data-width=200, data-height=200 .tabset}
+-------------------------------------------------------------------------------------------------
+
+For the better readability of the hierarchical cluster the random sample of 50 songs has been derived from the main sample 608 songs. As we can see it is divided into two main brunches, which further divide sample into three subbrunches. Ideally (taking into account the research question), the first main brunch could correspond to the oruqesta de Canaro and the other to Orquesta de Troilo, however, it is not a case. The songs of both groups are mingled with eachother across the cluster tree.
+Having a glimpse at the heatmap we can presume that the influance on the clustering had instrumentalness, speechiness, chroma G and some timbre coefficients. Nevertheless, there is no precise clear-cut relationship between one audio feature or a group of features and this hierarchical clustering.
+
+Moreover,the relistening of the pieces did not help to understand which features separate these clusters. It may be due to the fact that the features responsibile for brunching are not easly perceivable by only listening to the audios or that the cluster analysis is not really stable.   
+
+
+
+
+Ultima curva
+=================================================================================================
 
 2019. Project made by Aleksandra Michalko as a part of the course Computational Musicology at the University of Amsterdam given by/lectured by Dr John Ashley Burgoyne.
 
