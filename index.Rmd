@@ -28,14 +28,14 @@ load("C:/Users/pc/Desktop/Computational-Musicology-2019/cantro.RData")
 ```
 
 
-Got√°n
+Got·n
 ===============================================================================================================
 
-###**Got√°n** 
+###**Got·n** 
 
 "Tango can be discussed, and we discuss it, but it encloses, as everything that is true, a secret...a French or Spanish composer who threads a tango, discovers, not without surprise, he has threaded something that our ears do not recognize, that our memory does not host, and that our body rejects it could be said that without the sunsets and evenings of Buenos Aires no tango can be made...and that this adventurous species has, however humble, its place on the universe" (Borges in Gomez, 2007/trans. A. Michalko).
 
-Since the 1930s, musicologists and dance specialists have tried to reconstruct and "put some systematic order" into tango origins (Savigliano, 1995). The search for Argentinean tango's beginnings and authenticity raised many discussions as some historians attribute it to African population connecting it to their rituals and music traditions; others seek its origins in the art of payadores (singers and guitar players from the inside of the country); and some in the arrival of European immigrants at the end of 19th century. The matter of which one of these groups is more entitled to tango will not be discussed here. Instead, I would like to explore and compare the style of two iconic tango orchestras: Orquesta de Francisco Canaro and Orquesta de Anibal Troilo. The orchestra of Canaro was active mostly between 1920-1940s and orchestra of Troilo after 1940s. One remarkable difference is that Canaro performed mostly with female singers whereas Troilo with male tangueros. I will analyze their dyscographies in order to find some other differences and similarities between them. Perhaps, this analyisis will reveal some secrets of tango. 
+Since the 1930s, musicologists and dance specialists have tried to reconstruct and "put some systematic order" into tango origins (Savigliano, 1995). The search for Argentinean tango's beginnings and authenticity raised many discussions as some historians attribute it to African population connecting it to their rituals and music traditions; others seek its origins in the art of payadores (singers and guitar players from the inside of the country); and some in the arrival of European immigrants at the end of 19th century. The matter of which one of these groups is more entitled to tango will not be discussed here. Instead, I would like to explore and compare the style of two iconic tango orchestras: Orquesta de Francisco Canaro and Orquesta de Anibal Troilo. The orchestra of Canaro was active mostly between 1920-1940s and orchestra of Troilo after 1940s. One remarkable difference is that Canaro performed mostly with female singers whereas Troilo with male tangueros. I will analyze their discographies in order to find some other differences and similarities between them. Perhaps, this analysis will reveal some secrets of tango. 
 
 
 
@@ -44,251 +44,10 @@ Since the 1930s, musicologists and dance specialists have tried to reconstruct a
 
 **Corpus**
 
-The Corpus consists of tango songs performed by orquesta de Canaroand Orquesta de Troilo. On basis of their dyscographies and recordings, I will search for similarities and differences between those two tango orchestras. The corpus consists of 608 tracks (304 performed by Orquesta de Canaro and 304 by de Orquesta de Troilo). 
+The Corpus consists of tango songs performed by Orquesta de Canaro and Orquesta de Troilo. On basis of their discographies and recordings, I will search for similarities and differences between those two tango orchestras. The corpus consists of 608 tracks (304 performed by Orquesta de Canaro and 304 by de Orquesta de Troilo). 
 
 
-
-Combinations {data-navmenu="First Steps" data-orientation=columns}
-===============================================================================
-
-Tango means {data-width= 100, data-height=100 .storyboard}
-------------------------------------------------------------------------
-###
-
-By comparing means of danceability, tempo, valence and energy we can see some differences, however, how significant they are, still needs to be determined. The mean (M) and  standard deviation (sd) of danceability feature for Canaro are 0.66 and 0.12 respectively. For Troilo M = 50 and sd = 0.10. The valence for Canaro: M = 0.71, sd = 0.14 and for Troilo: M= 0.59 and sd = 0.16. The energy for Canaro: M = 0.27, sd = 0.09 and for Troilo: M= 0.31, sd = 0.11. In general the means of Canaro's audio features are higher than the ones of Troilo with exception of energy feature.
-
-For both orchestras the mean of tempo is around 120: Orquesta de Canaro M = 121, sd=17.3 and Orquesta de Troilo M = 117, sd 17.1.54 and Tita sd= 24.21. Due to the significant variability of tempi across the songs the difference between the min en max values is rather large. For instance, the min and max tempo of Orquesta de Canaro is 57.56 and 193.74 respectively. For Orquesta de Troillo the min tempo is 57.24 and max tempo 186.18. Indeed, the diversity and changeability of tempi in tango is one of its fundamentals. Also, because of tango's mutable and mercurial character, non-normal distribution in all audio features is observed. Due to these observations I will not consider extreme values of data set as outliers.
-
-tango means {data-width=800, data-height=800 .tabset}
-------------------------------------------------------
-###**Tango means...danceability**
-
-
-```{r, fig.width=0.5, fig.height=0.5}
-plot2<- ggplot(cantro,aes(x=orquesta, y= danceability, color = orquesta))+
-   geom_boxplot()+
-   theme(panel.background = element_rect(fill = "white"))+
-   theme(panel.grid.major = element_line(colour = "grey"))+
-   theme(legend.position = "none")
-ggplotly(plot2)
-```
-
-###**Tango means...energy**
-```{r, fig.width=0.5, fig.height=0.5}
-plot3<- ggplot(cantro,aes(x=orquesta, y= energy, color = orquesta))+
-   geom_boxplot()+
-   theme(panel.background = element_rect(fill = "white"))+
-   theme(panel.grid.major = element_line(colour = "grey"))+
-   theme(legend.position = "none")
-ggplotly(plot3)
-```
-
-
-
-
-###**Tango Pace**
-
-```{r, fig.width=0.5, fig.height=0.5}
-plot1<- ggplot(cantro,aes(x = orquesta, y = tempo, color = orquesta))+
-   geom_boxplot()+
-   theme(panel.background = element_rect(fill = "white"))+
-   theme(panel.grid.major = element_line(colour = "grey"))+
-   theme(legend.position = "none")
-ggplotly(plot1)
-```
-
-
-
-
-Next steps {width=100, .storyboard} 
----------------------------------------------------------------------
-###**Next steps**
-
-
-In the further analysis I would like to combine various variables and examine their interdependency and perhaps find some tendencies and patterns. 
-
-"If one wants eternal tango, one has to admit changing tango, because the substance of tango does not reside in the 2 for 4 nor in four for eight, but in change. And the constant change demands/requires constant searching, the constant experimentation" (Gobello,1980/Trans. A. Michalko).
-
-
-
-Milonga {data-navmenu="First Steps"}
-======================================================================================================
-
-Milonga {data-width=300, data-height=300}
--------------------------------------------------------------------------------------------
-###**Milonga**
-
-The tango songs recorded by Orquesta de Canaro and Orquesta de Troilo are made for dancing tango. The tango dancers are perfectly able to dance along with the music and no editing of audio is needed in order to make those audio tracks suitable for milongas. However, having in mind a non-normal distribution of variables across all data (preliminary analysis), I want to have a closer look at the relations between danceability and energy, danceability and valence and danceability and tempo. 
-
-First, I will look at the relation between danceability and energy. I grouped the observations by the name of the orchestra. 
-
-Mezclando {data-width=700, data-height=700, .tabset}
---------------------------------------------------------------------------------------------------------------
-###danceability and energy
-
-
-```{r, fig.width=2, fig.height=2}
-plot4<- ggplot(cantro, aes(x= energy, y = danceability, group = orquesta, label = track_name))+
-  geom_jitter(aes(color=orquesta, shape = orquesta), alpha = 0.6)+
-  geom_smooth(aes(color=orquesta), se = FALSE)+
-  theme(panel.background = element_rect(fill = "white"))+
-  theme(panel.grid.major = element_line(colour = "grey"))+
-  theme(legend.title = element_blank())
-ggplotly(plot4)
-```
-
-***
-
-In both cases the danceability decreases when energy increases.
-
-
-###danceability and Valence
-
-
-
-```{r, fig.width=2, fig.height=2}
-plot5<- ggplot(cantro, aes(x= valence, y = danceability, group = orquesta, label = track_name))+
-  geom_jitter(aes(color=orquesta, shape = orquesta), alpha = 0.6)+
-  geom_smooth(aes(color=orquesta), se = FALSE)+
-  theme(panel.background = element_rect(fill = "white"))+
-  theme(panel.grid.major = element_line(colour = "grey"))+
-  theme(legend.title = element_blank())
-ggplotly(plot5)
-```
-
-***
-
-There is no significant difference between interdependency of two features among Orquesta de Canaro and Orquesta de Troilo: in both cases the danceability gradually increases with the increase of the valence.
-
-
-###Danceability and Tempo
-
-
-```{r, fig.width=2, fig.height=2}
-plot6<- ggplot(cantro, aes(x= tempo, y = danceability, group = orquesta, label = track_name))+
-  geom_jitter(aes(color=orquesta, shape = orquesta), alpha = 0.6)+
-  theme(panel.background = element_rect(fill = "white"))+
-  theme(panel.grid.major = element_line(colour = "grey"))+
-  theme(legend.title = element_blank())
-ggplotly(plot6)
-```
-
-***
-
-The scatterplot confirms the findings of preliminary analysis: the perfect tempo to dance tango seems to be ca 120. 
-
-Commentary {data-width = 100,data-height = 100, .storyboard}
-------------------------------------------------------------------------------------------------------------
-
-The comparison of interdependencies among various audio features did not demonstrate that the recordings of two orchestras would follow individual/peculiar patterns. On contrary, in those three scatterplots, the orchestras seem to follow similar patterns. Perhaps, more detailed analysis of particular songs will reveal more differences between those tango orchestras. For instance, analysis of the same tango song.
-
-Chromagrams {data-navmenu="Silbando" data-orientation=columns}
-==============================================================================================
-
-together{data-width=500, data-height=500 .tabset}
----------------------------------------------------------------------------------
-
-###Orquesta de Troilo
-
-![Orquesta de Troilo](C:/Users/pc/Desktop/Computational-Musicology-2019/silbandotro.png)
-
-###Orquesta de Canaro
-
-![Orquesta de Canaro](C:/Users/pc/Desktop/Computational-Musicology-2019/silbandocan.png)
-
-
-
-
-text{data-width=400, data-height=400}
-------------------------------------------------------------------------------
-Both chromagrams illustrate tango song *Silbando*. The first is a version of Troilo orchestra and the second one of Canaro. The Spotify features clasify a key mode of both versions as D major. However, the A sections of the song are in d minor and B sections are in D major. Both chromagrams suggest a presence of rich harmony in two versions, especially chroma features of Canaro show a presence of almost all 12 tones throughout all the song (with exception of B and Bb). In Troilo's version we can see better the predominance of A,  G and D. It is not surprising as d/D is a Tonic, G/g a subdominant and A domimnant of d minor and D major.   
-
-
-Similarity matrices {data-navmenu="Silbando" data-orientation=columns}
-==================================================================================================
-
-both{data-width=500, data-height=500 .tabset}
-----------------------------------------------------------------------------------
-
-###Orquesta de Troilo
-
-![Orquesta de Troilo](C:/Users/pc/Desktop/Computational-Musicology-2019/matrsiltrobarseucl.png)
-
-
-###Orquesta de Canaro 
-
-![Orquesta de Canaro](C:/Users/pc/Desktop/Computational-Musicology-2019/matrsilcanbarseucl.png)
-
-
-
-text{data-width=500, data-height=500}
---------------------------------------------------------------------------------------
-The original structure of the tango song *Silbando* is: Intro A A‚Äô B B‚Äô B‚Äô(whistling) A A‚Äô B B‚Äô B‚Äô(whistling).
-The versions of Troilo and Canaro vary substantially in structure, but also in the songs' instrumentations. 
-*Silbando* of Troilo has a structure of B B‚Äô A A‚Äô B‚Äô‚Äô B‚Äô‚Äô‚Äô A‚Äô‚Äô A‚Äô‚Äô‚Äô B‚Äô‚Äô‚Äô‚Äô and has lots of timbre changes. Although, the piece was originally written for a singer and piano/orchestra, this version is instrumental. It starts with soft whistling accompanied by a guitar. In the next section clearly visible on the similarity matrix (around 25s) appears section B', which is played on accordion and guitar. 
-Interestingly enough, Troilo does not introduce a new instrument in each new section. Instead, he makes new combinations of the same instruments (for instance, accordion + guitar, guitar + double bass, accordion + double bass); manipulates acoustic balance between them (for instance, in B and B'' we have the same combination of instruments, however, in B the accordion is much more salient than a guitar whereas in B'' they are even); and changes timbre through the usage of various articulations (for, instance pizzicato and bowing on strings) and dynamics. For these reasons, the similarity matrix shows many timbre novelties (substantial amount of grey/yellow lines throughout the duration of all the piece), which in its turn indicate clearly the beginning of each section. 
-
-Nevertheless, the section division marked by the timbre novelties does not necessarily coincide with the  general division  of similarity matrix: , for instance the  timbre novelty pattern suggests that the very beginning (0-25s) of Troilo's version has two separate segments, although, it should be treated as one (A). On the other hand, the similarity matrix interprets the middle of the piece as a single section (from 60-120s), even though, it has many more sections within it (as indicated by the timbre novelty lines). We could interpret it as a Type I Error, even though, at this moment we are able to see the structure of the piece ( as we combine information from similarity matrix general segmentation and the timbre novelty lines). However, as the consequences of this error, the further analysis might yield incorrect results, for instance, of the key chord recognition.
- 
-The version of Canaro has a structure: A A‚Äô B B‚Äô A‚Äô‚Äô A‚Äô‚Äô‚Äô B‚Äô‚Äô B‚Äô‚Äô‚Äô B‚Äô‚Äô‚Äô‚Äô A‚Äô‚Äô‚Äô‚Äô A‚Äô‚Äô‚Äô‚Äô‚Äô. It is more difficult to see this structure on the similarity matrix as it does not have so many remarkable timbre changes as a version of Troilo. In fact, the entrance of the singer in 1:03 is almost not marked/visible on the similarity matrix. The big grey/yellow line around 2:10 signalizes a timbre novelty, which in this case is whistling.
-
-Chord Recognition {data-navmenu="Silbando" data-orientation=columns}
-====================================================================================================
-
-Cantro{data-width=500, data-height=500 .tabset}
-------------------------------------------------------------------------------------------------------
-
-###Orquesta de Troilo
-
-![Orquesta de Troilo](C:/Users/pc/Desktop/Computational-Musicology-2019/chordssilbandotro.png)
-
-###Orquesta de Canaro
-
-![Orquesta de Canaro](C:/Users/pc/Desktop/Computational-Musicology-2019/chordssilbandocantro.png)
-
-Text{data-width=400, data-height=400}
------------------------------------------------------------------------------------------------------------
-In the majority of tango songs, the Spotify features failed to assign a correct key to the song. It may be due to the fact that a new section of tango song is usually played in another key mode, for instance, the A part of *Silbando* is in d minor and the B part in D major.
-The chord recognition does not work very well either.
-The key mode of both performances of *Silbando* given by Spotify API features is D Major. Nevertheless, in case of orquesta de Canaro indicates in the first section a predominance of f# minor and c# minor. Around 80s a d minor comes into play, however, from 100s the f# minor and c# minor are again predominant. Two vertical yellow lines indicate transitions between sections A and B, which as mentioned before are in different modes (A in minor key and B in major key). Interestingly enough, these are not the only places where the transition between the modes takes place. It is rather clear that chord recognition failed to indicate major modes and in case of ambiguity ca 100s "privileges" minor modes.
-
-In case of Troilo's version the key chord recognition is also unprecise and ambiguous. Although, from 60s till 120s the algorithm distinguishes d minor, D Major, a minor and A Major, it is unable to point out the exact changes and transitions of the chords.  It might be due to the incorrect section division (see similarity matrices) but the chord recognition made per bars yields similar results. It shows the simultaneous occurrence of A major and a minor, even though, the listeners are able to distinguish clearly a chord mode of each section and bar while listening to the piece.   
-
-
-These examples suggest that Spotify's tools for harmony recognition are insufficient and unable to analyze/show a complexity and richness of tango harmony. In these cases, the difficulties and ambiguities in chord recognition stem from the tuning issues, segmentation ambiguities and confusion of partials.
-
-
-
-
-
-Cepstrograms and Timbre Coefficients comparison {data-navmenu="Silbando" data-orientation=columns}
-==========================================================================================================
-
-cepstrograms {data-width=600, data-height=600 .tabset}
-------------------------------------------------------------------------------------------------------------
-
-###Timbre Coefficients
-
-![timbre coefficients Silbando](C:/Users/pc/Desktop/Computational-Musicology-2019/timbrecoefsilbando.png)
-
-
-###Cepstrograms
-
->Orquesta de Canaro
-![cepstrogram silbando Canaro](C:/Users/pc/Desktop/Computational-Musicology-2019/cepstrobarsilcan.png)
-
-
-![Cepstrogram Silbando Troilo](C:/Users/pc/Desktop/Computational-Musicology-2019/cepstrosiltro.png)
-
-
-text {data-width=400, data-height=400}
--------------------------------------------------------------------------------------------------------------
-The comparison and analysis of timbre coefficents shows substantial differences between those two versions. The third component, which according to Spotify API correlates with spectral flatness has a very low values in Troilo's version (from 5 till -120) and relatively high ones in Canaro's version of this piece (from 40 till 80). It suggests that the spectral power, in case of Troilo's performance, is concentrated in a relatively small number of bands whereas Cantro's version has similar amount of power in all spectral bands. 
-Furthermore, the difference in components 5, 6 and 7 is observed. Although, Spotify API does not specify with which acoustic features those components correlate, a possible candidates are: Log Spectral Spread and Roll- off, Spectral Irregularity or Spectral Entropy. However, which ones precisely still needs to be determined.   
-
-The individual cepstrograms of these two versions confirm the previous comparison. 
-
-Classifier {.storyboard}
+Classifier {data-navmenu="First Steps" .storyboard}
 ============================================================================================================
 
 ###K-Nearest Neighbors Classification
@@ -317,13 +76,274 @@ The results of Random Forest suggest three audio features that are the most help
 
 ***
 
-In the reduced version of knn only top three features were used: Timbre Component 06, Danceability and Timbre Component 11. Surprisingly enough, it has lower accuracy than the previous model:  0.690, kap 0.381 and j_ind 0.381. As a consequence it classified 95 songs of Canaro as of Troiolo's and 93 songs of Troilo as of Canaro's.
+In the reduced version of knn only top three features were used: Timbre Component 06, Danceability and Timbre Component 11. The reduction of features speeds up calculation process/machine performance and might significantly contribute to better classification of the music pieces. However, in this case, the reduced model accuracy has lowered substantially: 0.690, kap 0.381 and j_ind 0.381. As a consequence, it classified 95 songs of Canaro as of Troilo's and 93 songs of Troilo as of Canaro's. This results suggest three interpretations: (1) three features even though significant/prominent are not sufficient in order to correctly recognize and classify correctly the distinct styles of two orchestra's; (2) The algorithms and mechanisms/processes responsible for extraction of audio features need to be better developed in order to define better  subtle/sensitive nuances of audio features such as timbre, mode and code recognition; (3) the styles of both orchestras are not so different/distinct after all. 
+
+In the further analysis we will have a closer look at the individual features. 
+
+Go to the next section [Combinations].
 
 
-Clustering {data-orientation=columns}
+Combinations {data-navmenu="First Steps" data-orientation=columns}
+===============================================================================
+
+Tango means {data-width= 100, data-height= 50 .storyboard}
+------------------------------------------------------------------------
+
+###Table 1: Means and SD of Track level features
+
+```{r}
+
+pror
+
+```
+
+###
+By comparing means of danceability, tempo and energy we can already see some differences and similarities between the orchestras. The mean (M) and standard deviation (sd) of danceability feature for Canaro are 0.66 and 0.12 respectively. For Troilo M = 50 and sd = 0.10. According to Spotify API *danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.* * Based on this description, we can conclude that Canaro's audio tracks are more fitted for dancing tango, for they have better rhythm, tempo and beat regularity than the one's of Troilo. However, many tangueros and tango historians argue that the essence of tango resides in constant changes of tempo, rhythm and beat.   
+
+"If one wants eternal tango, one has to admit changing tango, because the substance of tango does not reside in the 2 for 4 nor in four for eight, but in change. And the constant change demands/requires constant searching, the constant experimentation" (Gobello,1980/Trans. A. Michalko).
+
+For both orchestras the mean of tempo is around 120 BPM: Orquesta de Canaro M = 121 BPM, sd=17.3 and Orquesta de Troilo M = 117 BPM, sd =  Due to the significant variability of tempi across the songs the difference between the min and max values is rather large. For instance, the min and max tempo of Orquesta de Canaro is 57.56 BPM and 193.74 BPM respectively. For Orquesta de Troilo the min tempo is 57.24 BPM and max tempo 186.18 BPM. Indeed, the diversity and changeability of tempi in tango is one of its fundamentals. Also, because of tango's mutable and mercurial character, non-normal distribution in all audio features is observed. Due to these observations I will not consider extreme values of data set as outliers.
+
+
+The energy for Canaro: M = 0.27, sd = 0.09 and for Troilo: M= 0.31, sd = 0.11. In general, the means of Canaro's audio features are higher than the ones of Troilo with exception of energy feature.
+
+Go to the next section [Milonga].
+
+*If you would like to know more about other feature descriptions provided by Spotify API, click [here](https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/).
+ 
+tango means {data-width=700, data-height=700 .tabset}
+------------------------------------------------------
+
+###**Tango means...danceability**
+
+
+```{r, fig.width=0.5, fig.height=0.5}
+plot2<- ggplot(cantro,aes(x=orquesta, y= danceability, color = orquesta))+
+   geom_boxplot()+
+   theme(panel.background = element_rect(fill = "white"))+
+   theme(panel.grid.major = element_line(colour = "grey"))+
+   theme(legend.position = "none")
+ggplotly(plot2)
+```
+
+
+
+###**Tango means...tempo**
+
+```{r, fig.width=0.5, fig.height=0.5}
+plot1<- ggplot(cantro,aes(x = orquesta, y = tempo, color = orquesta))+
+   geom_boxplot()+
+   theme(panel.background = element_rect(fill = "white"))+
+   theme(panel.grid.major = element_line(colour = "grey"))+
+   theme(legend.position = "none")
+ggplotly(plot1)
+```
+
+
+###**Tango means...energy**
+```{r, fig.width=0.5, fig.height=0.5}
+plot3<- ggplot(cantro,aes(x=orquesta, y= energy, color = orquesta))+
+   geom_boxplot()+
+   theme(panel.background = element_rect(fill = "white"))+
+   theme(panel.grid.major = element_line(colour = "grey"))+
+   theme(legend.position = "none")
+ggplotly(plot3)
+```
+
+
+
+Milonga {data-navmenu="First Steps" data-orientation=rows}
+=============================================================================================
+
+Milongas {data-width=200, data-height=200}
+-------------------------------------------------------------------------------------------
+
+The tango songs recorded by Orquesta de Canaro and Orquesta de Troilo are meant to be danced. The tango dancers are perfectly able to dance along with the music and no editing of audio is needed in order to make those audio tracks suitable for milongas. However, having in mind a non-normal distribution of variables across all data (preliminary analysis), I want to have a closer look at the relations between danceability and energy, danceability and tempo, danceability and timbre coefficients 06 and 11.
+I grouped the observations by the name of the orchestra. 
+
+Features {data-width=700, data-height=700, .tabset}
+-------------------------------------------------------------------------------------------------
+
+###Danceability and Energy
+
+
+```{r, fig.width=2, fig.height=2}
+plot4<- ggplot(cantro, aes(x= energy, y = danceability, group = orquesta, label = track_name))+
+  geom_jitter(aes(color=orquesta, shape = orquesta), alpha = 0.6)+
+  geom_smooth(aes(color=orquesta), se = FALSE)+
+  theme(panel.background = element_rect(fill = "white"))+
+  theme(panel.grid.major = element_line(colour = "grey"))+
+  theme(legend.title = element_blank())
+ggplotly(plot4)
+```
+###Danceability and Tempo
+
+
+```{r, fig.width=2, fig.height=2}
+plot6<- ggplot(cantro, aes(x= tempo, y = danceability, group = orquesta, label = track_name))+
+  geom_jitter(aes(color=orquesta, shape = orquesta), alpha = 0.6)+
+  theme(panel.background = element_rect(fill = "white"))+
+  theme(panel.grid.major = element_line(colour = "grey"))+
+  theme(legend.title = element_blank())
+ggplotly(plot6)
+```
+
+
+###Danceability and Timbre Coefficient 06
+
+
+
+```{r, fig.width=2, fig.height=2}
+plot5<- ggplot(ct, aes(x= danceability, y = c06, group = orquesta, label = track_name))+
+  geom_jitter(aes(color=orquesta, shape = orquesta), alpha = 0.6)+
+  geom_smooth(aes(color=orquesta), se = FALSE)+
+  theme(panel.background = element_rect(fill = "white"))+
+  theme(panel.grid.major = element_line(colour = "grey"))+
+  theme(legend.title = element_blank())
+ggplotly(plot5)
+```
+
+###Danceability and Timbre Coefficient 11
+
+```{r, fig.width=2, fig.height=2}
+plot11<- ggplot(ct, aes(x= danceability, y = c11, group = orquesta, label = track_name))+
+  geom_jitter(aes(color=orquesta, shape = orquesta), alpha = 0.6)+
+  geom_smooth(aes(color=orquesta), se = FALSE)+
+  theme(panel.background = element_rect(fill = "white"))+
+  theme(panel.grid.major = element_line(colour = "grey"))+
+  theme(legend.title = element_blank())
+ggplotly(plot11)
+```
+
+Commentary {data-width = 50,data-height = 50 data-orientation=columns}
+------------------------------------------------------------------------------------------------
+As observed before, Canaro's danceability is on average higher than Troilo's. Nevertheless, in both cases the smooth curve drew a similar pattern: the danceability decreased slightly when energy increased. In case of Canaro it lowered from 0.69 to 0.58 and in case of Troilo it lowered from 0.54 to 0.47.
+The scatterplot that depicts the relationship between danceability and tempo confirms preliminary findings: the perfect tempo to dance tango seems to be ca 120 BPM. 
+As previously shown by the Random Forest algorithm not only danceability feature is important in correct classification of tango songs, but also Timbre Coefficients 06 and 11 (see section [Classifier]). 
+The danceability and timbre coefficient 06 are positively correlated: when danceability increases the timbre coefficient 06 increases as well. Furthermore, the audio tracks of Troilo are concentrated between danceability values 0.4 and 0.6 and timbre coefficients values -25 till 0, whereas the ones of Canaro between 0.6 and 0.86 for danceability and between 0 and 32 for timbre coefficients. 
+On the other hand, the danceability and timbre coefficient 11 are negatively correlated: when danceability increases, the values of timbre coefficient 11 decrease. Troilo's audio tracks are centered between -14 and -4 for timbre coeficients with danceability values between 0.4 and 0.6, whereas the ones of Canaro  between -11 and -25 for timbre coefficient 11 with danceability values between 0.6 and 0.86. 
+
+Small conclusion {data-width =50,data-height =50 data-orientation=columns}
+-------------------------------------------------------------------------------------------------
+The comparison of interdependencies among various audio features demonstrate that the recordings of two orchestras vary in some aspects: (1) the danceability feature is substantially higher in audio tracks of Canaro (2) since danceability positively correlates with the Timbre Coefficient 06, the values of this coefficient are also higher for Canaro's recordings than for Troilo's (3) Troilo's recordings have higher values of Timbre Coefficient 11, which correlates negatively with danceability. 
+Perhaps, more detailed analysis of particular songs will reveal even more differences between these tango orchestras. For instance, analysis of covers of the tango song *Silbando*.
+Go to the next section [Chromagrams] of the song *Silbando*.
+
+
+Chromagrams {data-navmenu="Silbando" data-orientation=columns}
+==============================================================================================
+  
+together{data-width=500, data-height=500 .tabset}
+---------------------------------------------------------------------------------
+  
+###Orquesta de Troilo
+  
+![Orquesta de Troilo](C:/Users/pc/Desktop/Computational-Musicology-2019/silbandotro.png)
+
+###Orquesta de Canaro
+
+![Orquesta de Canaro](C:/Users/pc/Desktop/Computational-Musicology-2019/silbandocan.png)
+
+
+
+text{data-width=400, data-height=400}
+------------------------------------------------------------------------------
+Both chromagrams illustrate tango song *Silbando*. The first is a version of Troilo orchestra and the second one of Canaro. The Spotify features clasify a key mode of both versions as D major. However, the A sections of the song are in d minor and B sections are in D major. Both chromagrams suggest a presence of rich harmony in two versions, especially chroma features of Canaro show a presence of almost all 12 tones throughout all the song (with exception of B and Bb). In Troilo's version we can see better the predominance of A,  G and D. It is not surprising as d/D is a Tonic, G/g a subdominant and A dominant of d minor and D major.   
+
+Go to the next section [Similarity matrices].
+
+Similarity matrices {data-navmenu="Silbando" data-orientation=columns}
+=================================================================================================
+
+both{data-width=500, data-height=500 .tabset}
+----------------------------------------------------------------------------------
+
+###Orquesta de Troilo
+
+![Orquesta de Troilo](C:/Users/pc/Desktop/Computational-Musicology-2019/matrsiltrobarseucl.png)
+
+
+###Orquesta de Canaro 
+
+![Orquesta de Canaro](C:/Users/pc/Desktop/Computational-Musicology-2019/matrsilcanbarseucl.png)
+
+
+
+text{data-width=500, data-height=500}
+--------------------------------------------------------------------------------------
+The original structure of the tango song *Silbando* is: Intro A Aí B Bí Bí(whistling) A Aí B Bí Bí(whistling).
+The versions of Troilo and Canaro vary substantially in structure, but also in the songs' instrumentations. 
+*Silbando* of Troilo has a structure of B Bí A Aí Bíí Bííí Aíí Aííí Bíííí and has multiple timbre changes. Although, the piece was originally written for a singer and piano/orchestra, this version is instrumental. It starts with soft whistling accompanied by a guitar. In the next section clearly visible on the similarity matrix (around 25s) appears section B', which is played on accordion and guitar. 
+Interestingly enough, Troilo does not introduce a new instrument in each new section. Instead, he makes new combinations of the same instruments (for instance, accordion + guitar, guitar + double bass, accordion + double bass); manipulates acoustic balance between them (for instance, in B and B'' we have the same combination of instruments, however, in B the accordion is much more salient than a guitar whereas in B'' they are even); and changes timbre through the usage of various articulations (for, instance pizzicato and bowing on strings) and dynamics. For these reasons, the similarity matrix shows many timbre novelties (substantial amount of grey/yellow lines throughout the duration of all the piece), which in its turn indicate clearly the beginning of each section. 
+
+Nevertheless, the section division marked by the timbre novelties does not necessarily coincide with the  general division  of similarity matrix: , for instance the  timbre novelty pattern suggests that the very beginning (0-25s) of Troilo's version has two separate segments, although, it should be treated as one (A). On the other hand, the similarity matrix interprets the middle of the piece as a single section (from 60-120s), even though, it has many more sections within it (as indicated by the timbre novelty lines). We could interpret it as a Type I Error, even though, at this moment we are able to see the structure of the piece ( as we combine information from similarity matrix general segmentation and the timbre novelty lines). However, as the consequences of this error, the further analysis might yield incorrect results, for instance, of the key chord recognition.
+
+The version of Canaro has a structure: A Aí B Bí Aíí Aííí Bíí Bííí Bíííí Aíííí Aííííí. It is more difficult to see this structure on the similarity matrix as it does not have so many remarkable timbre changes as a version of Troilo. In fact, the entrance of the singer in 1:03 is almost not marked/visible on the similarity matrix. The big grey/yellow line around 2:10 signalizes a timbre novelty, which in this case is whistling.
+
+Go to the next section [Chord Recognition].
+
+Chord Recognition {data-navmenu="Silbando" data-orientation=columns}
+====================================================================================================
+  
+Cantro{data-width=500, data-height=500 .tabset}
+------------------------------------------------------------------------------------------------------
+  
+###Orquesta de Troilo
+  
+![Orquesta de Troilo](C:/Users/pc/Desktop/Computational-Musicology-2019/chordssilbandotro.png)
+
+###Orquesta de Canaro
+
+![Orquesta de Canaro](C:/Users/pc/Desktop/Computational-Musicology-2019/chordssilbandocantro.png)
+
+Text{data-width=400, data-height=400}
+-------------------------------------------------------------------------------------------------
+
+In the majority of tango songs, the Spotify features failed to assign a correct key to the song. It may be due to the fact that a new section of tango song is usually played in another key mode, for instance, the A part of *Silbando* is in d minor and the B part in D major.
+The chord recognition does not work very well either.
+The key mode of both performances of *Silbando* given by Spotify API features is D Major. Nevertheless, in case of Orquesta de Canaro indicates in the first section a predominance of f# minor and c# minor. Around 80s a d minor comes into play, however, from 100s the f# minor and c# minor are again predominant. Two vertical yellow lines indicate transitions between sections A and B, which as mentioned before are in different modes (A in minor key and B in major key). Interestingly enough, these are not the only places where the transition between the modes takes place. It is rather clear that chord recognition failed to indicate major modes and in case of ambiguity ca 100s "privileges" minor modes.
+
+In case of Troilo's version the key chord recognition is also unprecise and ambiguous. Although, from 60s till 120s the algorithm distinguishes d minor, D Major, a minor and A Major, it is unable to point out the exact changes and transitions of the chords.  It might be due to the incorrect section division (see [Similarity matrices]) but the chord recognition made per bars yields similar results. It shows the simultaneous occurrence of A major and a minor, even though, the listeners are able to distinguish clearly a chord mode of each section and bar while listening to the piece.   
+
+
+These examples suggest that Spotify's tools for harmony recognition are insufficient and unable to analyze/show a complexity and richness of tango harmony. In these cases, the difficulties and ambiguities in chord recognition stem from the tuning issues, segmentation ambiguities and confusion of partials.
+
+Go to the next section [Cepstrograms and Timbre Coefficients comparison].
+
+Cepstrograms and Timbre Coefficients comparison {data-navmenu="Silbando" data-orientation=columns}
+=================================================================================================
+  
+cepstrograms {data-width=600, data-height=600 .tabset}
+-------------------------------------------------------------------------------------------------
+  
+###Timbre Coefficients
+  
+![timbre coefficients Silbando](C:/Users/pc/Desktop/Computational-Musicology-2019/timbrecoefsilbando.png)
+
+
+###Cepstrogram Canaro 
+
+![cepstrogram silbando Canaro](C:/Users/pc/Desktop/Computational-Musicology-2019/cepstrobarsilcan.png)
+
+###Cepstrogram Troilo
+
+
+![Cepstrogram Silbando Troilo](C:/Users/pc/Desktop/Computational-Musicology-2019/cepstrosiltro.png)
+
+
+text {data-width=400, data-height=400}
+------------------------------------------------------------------------------------------------
+The comparison and analysis of timbre coefficients shows substantial differences between those two versions.The third component, which according to Spotify API correlates with spectral flatness has very low values in Troilo's version (between 5 and -120) and relatively high ones in Canaro's version of this piece (between 40 and 80). It suggests that the spectral power, in case of Troilo's performance, is concentrated in a relatively small number of bands whereas Canaro's version has similar amount of power in all spectral bands. 
+Furthermore, the difference in components 5, 6 and 7 is observed. Although, Spotify API does not specify with which acoustic features those components correlate, possible candidates are: Log Spectral Spread and Roll- off, Spectral Irregularity or Spectral Entropy. However, which ones precisely still needs to be determined.   
+
+The individual cepstrograms of these two versions confirm the previous comparison. They also confirm findings suggested by Random Forest analysis ie. that the timbre coefficients vary substantially between Canaro's and Troilo's songs and might be key features in defining their individual styles. They also show that the first componen that refers to the loudness of the piece is low. It confirms the general findings of preliminary analysis where means of loudness of Canaro's and Troilo's tracks were only -12.10 and -11.80 respectively.    
+
+Go to the next section [Bringing tangos together].
+
+Bringing tangos together {data-orientation=columns}
 =========================================================================================================
 
-both{data-width=800, data-height=800 .tabset}
+both{data-width=700, data-height=700 .tabset}
 -------------------------------------------------------------------------------------------
 
 ###Hierarchical clustering
@@ -336,31 +356,50 @@ both{data-width=800, data-height=800 .tabset}
 
 grDevices::dev.size("px")
 heatmaply(
-    ct50r_juice,
-    # hclustfun = hclust,
-    hclustfun = protoclust,
-    # Comment out the hclust_method line when using protoclust.
-    # hclust_method = 'average',
-    dist_method = 'manhattan')
+ct50r_juice,
+# hclustfun = hclust,
+hclustfun = protoclust,
+# Comment out the hclust_method line when using protoclust.
+# hclust_method = 'average',
+dist_method = 'manhattan')
 ```
 
-both{data-width=200, data-height=200 .tabset}
+both{data-width=300, data-height=300 .tabset}
 -------------------------------------------------------------------------------------------------
 
-For the better readability of the hierarchical cluster the random sample of 50 songs has been derived from the main sample 608 songs. As we can see it is divided into two main brunches, which further divide sample into three subbrunches. Ideally (taking into account the research question), the first main brunch could correspond to the oruqesta de Canaro and the other to Orquesta de Troilo, however, it is not a case. The songs of both groups are mingled with eachother across the cluster tree.
-Having a glimpse at the heatmap we can presume that the influance on the clustering had instrumentalness, speechiness, chroma G and some timbre coefficients. Nevertheless, there is no precise clear-cut relationship between one audio feature or a group of features and this hierarchical clustering.
+For the better readability of the hierarchical cluster the random sample of 50 songs has been derived from the main sample 608 songs. As we can see it is divided into two main branches, which further divide sample into three subbranches. Ideally (considering the research question), the first main branch could correspond to the Orquesta de Canaro and the other to Orquesta de Troilo, however, it is not a case. The songs of both groups are mingled with each other across the cluster tree.
+Having a glimpse at the heatmap we can presume that the influence on the clustering had acousticness, instrumentalness, speechiness, chroma G and some timbre coefficients. All previous analysis did not underline/show the importance of acousticness as classifying/determining factor of orchestra's styles, for instance, the means of Troilo's and Canaro's acousticness are rather similar 0.914 and 0.962 respectively. For this reason, the clustering by acousticness could refer rather to the quality and period of the sound recording technology. For instance, the recent release dates (2011 - 2019)  of Troilo's and Canaro's albums listed on Spotify API, could suggest that the recordings were made during the *digital era*, when in fact they were recorded much earlier (between 1920-1960), thus in *electrical and magnetic era*. The relistening of those tracks indicates the "old school" record processes, even though, it still does not explain the division of the clustering, since the tracks are not divided by the degree of their acousticness.              
 
-Moreover,the relistening of the pieces did not help to understand which features separate these clusters. It may be due to the fact that the features responsibile for brunching are not easly perceivable by only listening to the audios or that the cluster analysis is not really stable.   
+In general, the relistening of the pieces did not help to understand which features and how contributed to this clustering. It may be due to the fact that features responsible for branching are not easily perceivable by only listening to the audios or that the cluster analysis is not really stable. As a result, the precise clear-cut relationship between one audio feature or a group of features and this hierarchical clustering is difficult or even impossible to spot.
 
+Go to the next section [The last dance].
 
-
-
-Ultima curva
+The last dance
 =================================================================================================
 
-2019. Project made by Aleksandra Michalko as a part of the course Computational Musicology at the University of Amsterdam given by/lectured by Dr John Ashley Burgoyne.
+###Conclusion
 
-References: 
-Gobello, J. (1980). *Cr√≥nica general del tango* (No. 78 (091)). Fraterna.
-Gomez, A. (2009). *Ultimo patio*. Turmalina.
+The research goal of this project was to compare quatitatively and qualitatively styles of two iconic tango orchestras - Orquesta de Francisco Canaro and Orquesta de Anibal Troilo.
+In order to search for similarities and differences between them, I used audio features extracted by Spotify API and applied to them various computational methods and tests (e.g. Chromagrams, Cepstograms, Self-Similarity Matrices, Random Forest algorithm, K-Nearest Neighbor). In general, the differences were observed in the danceability feature (track-level feature) and timbre coefficient components 06 and 11 (see sections [Combinations] and [Milonga]). In the analysis of cover versions of the song *Silbando* the clear differences were observed in structure of the piece and timbre coefficient components. Nevertheless, it is not enough to draw from it any meaningful conclusions. Firstly, mode estimation in Spotify features turned out to be wrong for the majority of the songs from the sample. Secondly, chord recognition as well as section recognition (self similarity matrices) also failed to recognize correctly the structure of the piece as well as correct chord progressions. Thirdly, quality of the sound recording technology could greatly influence the performance of the Spotify algorithms (see sections [Bringing tangos together] and [Chord Recognition]) and as a consequence extract the wrong values of the audio features. For those reasons the construct, internal and external validity of this research might be put into question. 
+
+Although the Spotify API extraction features might perform well for pop music, they are not yet fit for measuring tango music. 
+
+
+
+
+###
+
+![Orquesta](C:/Users/pc/Desktop/Computational-Musicology-2019/chordon.jpg)
+
+
+###
+
+References:
+
+Gobello, J. (1980). *CrÛnica general del tango* (No. 78 (091)). Fraterna.
+
+Gomez, A. (2009). *⁄ltimo patio*. Turmalina.
+
 Savigliano, M. (1995). *Tango and the political economy of passion.* Westview Press.
+
+2019. Project made by Aleksandra Michalko as a part of the course Computational Musicology at the University of Amsterdam given by/lectured by Dr John Ashley Burgoyne.
